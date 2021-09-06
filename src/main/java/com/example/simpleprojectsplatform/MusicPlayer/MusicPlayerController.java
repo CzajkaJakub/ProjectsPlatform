@@ -1,6 +1,6 @@
 package com.example.simpleprojectsplatform.MusicPlayer;
 
-import com.example.simpleprojectsplatform.PathsAndTitles;
+import com.example.simpleprojectsplatform.PathsTitlesFiles;
 import com.example.simpleprojectsplatform.MainPlatform.PlatformController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
-public class MusicPlayerController implements Initializable, PathsAndTitles {
+public class MusicPlayerController implements Initializable, PathsTitlesFiles {
 
     @FXML
     Button playButton, stopButton, resetButton, nextMusicButton, previousSongButton, backToMain,
@@ -47,10 +47,32 @@ public class MusicPlayerController implements Initializable, PathsAndTitles {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         fillComboBox();
         createSongsList();
-        createSongPlayer();
-        changeLabelText();
-        createProgressBar();
-        createVolumeSlider();
+        if(notEmptyDirectory()){
+            createSongPlayer();
+            changeLabelText();
+            createVolumeSlider();
+            createProgressBar();
+        }
+    }
+
+    private void fillComboBox() {
+        for(Integer speed : songSpeeds){
+            musicSpeeds.getItems().add(speed.toString() + "%");
+        }
+    }
+
+    private void createSongsList() {
+        songs = new ArrayList<>();
+        File directory = new File(musicFilesPath);
+        File[] files = directory.listFiles();
+        if(Objects.requireNonNull(files).length != 0){
+            Collections.addAll(songs, files);
+        }
+    }
+
+    private void createSongPlayer() {
+        media = new Media(songs.get(songNumber).toURI().toString());
+        mediaPlayer = new MediaPlayer(media);
     }
 
     private void createProgressBar() {
@@ -67,31 +89,11 @@ public class MusicPlayerController implements Initializable, PathsAndTitles {
                 }
             }
         };
-        timer.scheduleAtFixedRate(task, 1000, 1000);
+        timer.scheduleAtFixedRate(task, 100, 100);
     }
 
     private void cancelTheTimer() {
         timer.cancel();
-    }
-
-    private void createVolumeSlider() {
-        mediaPlayer.setVolume(volumeSlider.getValue() * 0.01);
-        volumeSlider.valueProperty().addListener(event -> mediaPlayer.setVolume(volumeSlider.getValue() * 0.01));
-    }
-
-    private void fillComboBox() {
-        for(Integer speed : songSpeeds){
-            musicSpeeds.getItems().add(speed.toString() + "%");
-        }
-    }
-
-    private void createSongsList() {
-        songs = new ArrayList<>();
-        File directory = new File(musicFilesPath);
-        File[] files = directory.listFiles();
-        if(files != null){
-            Collections.addAll(songs, files);
-        }
     }
 
     private void changeLabelText() {
@@ -99,81 +101,97 @@ public class MusicPlayerController implements Initializable, PathsAndTitles {
         songNameLabel.setText(songName.split("\\.")[0]);
     }
 
-    private void createSongPlayer() {
-        media = new Media(songs.get(songNumber).toURI().toString());
-        mediaPlayer = new MediaPlayer(media);
+    private void createVolumeSlider() {
+        mediaPlayer.setVolume(volumeSlider.getValue() * 0.01);
+        volumeSlider.valueProperty().addListener(event -> mediaPlayer.setVolume(volumeSlider.getValue() * 0.01));
     }
+
 
     @FXML
     private void backToMain() throws IOException {
-        mediaPlayer.stop();
-        PlatformController.changeScene(platformPath, backToMain.getScene(), mainTitle);
+        if(notEmptyDirectory()){
+            mediaPlayer.stop();
+            cancelTheTimer();
+        }
+        PlatformController.changeScene(platformPath, mainTitle, platformIconPath);
     }
 
     @FXML
     private void playMusic(){
-        createProgressBar();
-        changeSpeedSong();
-        mediaPlayer.play();
+        if(notEmptyDirectory()){
+            createProgressBar();
+            mediaPlayer.play();
+        }
     }
 
     @FXML
     private void stopMusic(){
-        cancelTheTimer();
-        mediaPlayer.pause();
+        if(notEmptyDirectory()){
+            cancelTheTimer();
+            mediaPlayer.pause();
+        }
     }
 
     @FXML
     private void resetMusic(){
-        songProgressBar.setProgress(0);
-        mediaPlayer.seek(Duration.millis(0));
+        if(notEmptyDirectory()){
+            songProgressBar.setProgress(0);
+            mediaPlayer.seek(Duration.millis(0));
+        }
     }
 
     @FXML
     private void playNextMusic(){
-        if(songNumber < songs.size() - 1){
-            songNumber++;
-        }else{
-            songNumber = 0;
+        if(notEmptyDirectory()){
+            if(songNumber < songs.size() - 1){
+                songNumber++;
+            }else{
+                songNumber = 0;
+            }
+            mediaPlayer.stop();
+            createSongPlayer();
+            changeLabelText();
+            playMusic();
         }
-        mediaPlayer.stop();
-        createSongPlayer();
-        changeLabelText();
-        playMusic();
     }
 
     @FXML
     private void playPreviousSong(){
-        if(songNumber > 0){
-            songNumber--;
-        }else{
-            songNumber = songs.size() - 1;
+        if(notEmptyDirectory()){
+            if(songNumber > 0){
+                songNumber--;
+            }else{
+                songNumber = songs.size() - 1;
+            }
+            mediaPlayer.stop();
+            createSongPlayer();
+            changeLabelText();
+            playMusic();
         }
-        mediaPlayer.stop();
-        createSongPlayer();
-        changeLabelText();
-        playMusic();
-
     }
 
     @FXML
     private void playRandomSong(){
-        Random random = new Random();
-        songNumber = random.nextInt(songs.size());
-        mediaPlayer.stop();
-        createSongPlayer();
-        changeLabelText();
-        playMusic();
+        if(notEmptyDirectory()){
+            Random random = new Random();
+            songNumber = random.nextInt(songs.size());
+            mediaPlayer.stop();
+            createSongPlayer();
+            changeLabelText();
+            playMusic();
+        }
     }
 
     @FXML
     private void changeSpeedSong(){
-        String value = musicSpeeds.getValue();
-        if(value == null){
-            mediaPlayer.setRate(1);
-        }else{
-            double speed = Double.parseDouble(value.substring(0, value.length() - 1));
-            mediaPlayer.setRate(speed * 0.01);
+        if(notEmptyDirectory()){
+            String value = musicSpeeds.getValue();
+            if(value == null){
+                mediaPlayer.setRate(1);
+            }else{
+                double speed = Double.parseDouble(value.substring(0, value.length() - 1));
+                mediaPlayer.setRate(speed * 0.01);
+            }
         }
     }
 
@@ -181,6 +199,10 @@ public class MusicPlayerController implements Initializable, PathsAndTitles {
     private void showFiles() throws IOException {
         Desktop desktop = Desktop.getDesktop();
         desktop.open(new File(musicFilesPath));
+    }
+
+    private boolean notEmptyDirectory(){
+        return songs.size() != 0;
     }
 }
 
