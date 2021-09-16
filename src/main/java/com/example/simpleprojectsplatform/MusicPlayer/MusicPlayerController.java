@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
+
 public class MusicPlayerController implements Initializable, PathsTitlesFiles {
 
     @FXML
@@ -33,6 +34,7 @@ public class MusicPlayerController implements Initializable, PathsTitlesFiles {
     @FXML
     ProgressBar songProgressBar;
 
+
     private ArrayList<File> songs;
     private int songNumber = 0;
     private final Integer[] songSpeeds = {25, 50, 75, 100, 125, 150, 175, 200};
@@ -50,8 +52,19 @@ public class MusicPlayerController implements Initializable, PathsTitlesFiles {
         if(notEmptyDirectory()){
             createSongPlayer();
             changeLabelText();
-            createVolumeSlider();
+            setVolume();
+            setSpeedSong();
+        }
+    }
+
+    private void reloadSongs(){
+        createSongsList();
+        if(notEmptyDirectory()){
+            createSongPlayer();
+            changeLabelText();
+            setVolume();
             createProgressBar();
+            setSpeedSong();
         }
     }
 
@@ -70,9 +83,32 @@ public class MusicPlayerController implements Initializable, PathsTitlesFiles {
         }
     }
 
+    private void changeLabelText() {
+        String songName = songs.get(songNumber).getName();
+        songNameLabel.setText(songName.split("\\.")[0]);
+    }
+
+    private void setVolume() {
+        mediaPlayer.setVolume(volumeSlider.getValue() * 0.01);
+        volumeSlider.valueProperty().addListener(event -> mediaPlayer.setVolume(volumeSlider.getValue() * 0.01));
+    }
+
     private void createSongPlayer() {
         media = new Media(songs.get(songNumber).toURI().toString());
         mediaPlayer = new MediaPlayer(media);
+    }
+
+    @FXML
+    private void setSpeedSong(){
+        if(notEmptyDirectory()){
+            String value = musicSpeeds.getValue();
+            if(value == null){
+                mediaPlayer.setRate(1);
+            }else{
+                double speed = Double.parseDouble(value.substring(0, value.length() - 1));
+                mediaPlayer.setRate(speed * 0.01);
+            }
+        }
     }
 
     private void createProgressBar() {
@@ -85,35 +121,26 @@ public class MusicPlayerController implements Initializable, PathsTitlesFiles {
                 double progress = currentTime/endTime;
                 songProgressBar.setProgress(progress);
                 if(progress == 1){
-                    cancelTheTimer();
+                    this.cancel();
                 }
             }
         };
-        timer.scheduleAtFixedRate(task, 100, 100);
+        timer.scheduleAtFixedRate(task, 200, 200);
     }
 
     private void cancelTheTimer() {
         timer.cancel();
-    }
-
-    private void changeLabelText() {
-        String songName = songs.get(songNumber).getName();
-        songNameLabel.setText(songName.split("\\.")[0]);
-    }
-
-    private void createVolumeSlider() {
-        mediaPlayer.setVolume(volumeSlider.getValue() * 0.01);
-        volumeSlider.valueProperty().addListener(event -> mediaPlayer.setVolume(volumeSlider.getValue() * 0.01));
+        timer.purge();
     }
 
 
     @FXML
     private void backToMain() throws IOException {
-        if(notEmptyDirectory()){
+        if(timer != null){
             mediaPlayer.stop();
             cancelTheTimer();
         }
-        PlatformController.changeScene(platformPath, mainTitle, platformIconPath);
+        PlatformController.changeScene(platformPath, mainTitle, platformIcon);
     }
 
     @FXML
@@ -149,8 +176,7 @@ public class MusicPlayerController implements Initializable, PathsTitlesFiles {
                 songNumber = 0;
             }
             mediaPlayer.stop();
-            createSongPlayer();
-            changeLabelText();
+            reloadSongs();
             playMusic();
         }
     }
@@ -164,8 +190,7 @@ public class MusicPlayerController implements Initializable, PathsTitlesFiles {
                 songNumber = songs.size() - 1;
             }
             mediaPlayer.stop();
-            createSongPlayer();
-            changeLabelText();
+            reloadSongs();
             playMusic();
         }
     }
@@ -176,22 +201,8 @@ public class MusicPlayerController implements Initializable, PathsTitlesFiles {
             Random random = new Random();
             songNumber = random.nextInt(songs.size());
             mediaPlayer.stop();
-            createSongPlayer();
-            changeLabelText();
+            reloadSongs();
             playMusic();
-        }
-    }
-
-    @FXML
-    private void changeSpeedSong(){
-        if(notEmptyDirectory()){
-            String value = musicSpeeds.getValue();
-            if(value == null){
-                mediaPlayer.setRate(1);
-            }else{
-                double speed = Double.parseDouble(value.substring(0, value.length() - 1));
-                mediaPlayer.setRate(speed * 0.01);
-            }
         }
     }
 
@@ -200,6 +211,7 @@ public class MusicPlayerController implements Initializable, PathsTitlesFiles {
         Desktop desktop = Desktop.getDesktop();
         desktop.open(new File(musicFilesPath));
     }
+
 
     private boolean notEmptyDirectory(){
         return songs.size() != 0;

@@ -12,6 +12,14 @@
     -fx-background-color: black;
 }
 
+#autoPlayCheckBox
+{
+    -fx-background-color: black;
+    -fx-font-family: "MV Boli";
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+}
+
 
 #label
 {

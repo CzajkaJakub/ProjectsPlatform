@@ -11,8 +11,10 @@ public class PlatformApplication extends Application implements PathsTitlesFiles
     @Override
     public void start(Stage stage) throws IOException {
         stage.resizableProperty().set(false);
+        stage.setOnCloseRequest(windowEvent -> System.exit(0));
+        stage.getIcons().addAll(platformIcon, musicPlayerIcon);
         PlatformController.setStage(stage);
-        PlatformController.changeScene(platformPath, mainTitle, platformIconPath);
+        PlatformController.changeScene(platformPath, mainTitle, platformIcon);
     }
 
     public static void main(String[] args) {
