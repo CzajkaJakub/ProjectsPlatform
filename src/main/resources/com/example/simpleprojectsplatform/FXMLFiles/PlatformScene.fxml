@@ -1,21 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simpleprojectsplatform.MainPlatform.PlatformController">
+<AnchorPane id="background" fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="902.0" stylesheets="@../CSSfiles/Platform.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simpleprojectsplatform.MainPlatform.PlatformController">
    <children>
-      <MenuBar layoutY="2.0">
+      <ImageView fitHeight="587.0" fitWidth="902.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Platform/background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="backgroundLight" fitHeight="49.0" fitWidth="67.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Images/Platform/light.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="diamondIcon" fitHeight="137.0" fitWidth="149.0" layoutX="377.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Platform/diamond.png" />
+         </image>
+         <effect>
+            <Blend />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="177.0" fitWidth="696.0" layoutX="89.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Platform/welcomeText.png" />
+         </image>
+      </ImageView>
+      <MenuBar id="menuBar" depthTest="DISABLE" layoutY="2.0" prefHeight="25.0" prefWidth="75.0" AnchorPane.topAnchor="0.0">
          <menus>
-            <Menu mnemonicParsing="false" text="Music player">
+            <Menu mnemonicParsing="false" text="Projects">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#newMusicPlayer" onMenuValidation="#newMusicPlayer" text="Open player" />
-                  <MenuItem mnemonicParsing="false" onAction="#showMusicFiles" text="Add/Delete music files" />
+                  <Menu mnemonicParsing="false" text="Music Player">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newMusicPlayer" onMenuValidation="#newMusicPlayer" text="Open player" />
+                        <MenuItem mnemonicParsing="false" onAction="#showMusicFiles" text="Add/Delete music files" />
+                        <MenuItem mnemonicParsing="false" text="Information" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu mnemonicParsing="false" text="WikiCountry">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
                </items>
             </Menu>
          </menus>
       </MenuBar>
+      <Label id="animationLabel" alignment="CENTER" layoutX="89.0" layoutY="590.0" prefHeight="29.0" prefWidth="724.0" text="To use diamond's animations, press [Q, W, E, R, T, Y, U] or arrows to movethe diamond" textAlignment="CENTER" />
    </children>
 </AnchorPane>

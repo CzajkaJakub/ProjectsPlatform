@@ -13,8 +13,9 @@ public class PlatformApplication extends Application implements PathsTitlesFiles
         stage.resizableProperty().set(false);
         stage.setOnCloseRequest(windowEvent -> System.exit(0));
         stage.getIcons().addAll(platformIcon, musicPlayerIcon);
+        PlatformController platformController = new PlatformController();
         PlatformController.setStage(stage);
-        PlatformController.changeScene(platformPath, mainTitle, platformIcon);
+        platformController.mainScene();
     }
 
     public static void main(String[] args) {

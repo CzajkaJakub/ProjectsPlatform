@@ -1,0 +1,17 @@
+#background
+{
+    -fx-background-color: black;
+}
+
+#menuBar
+{
+    -fx-text-alignment: center;
+}
+
+#animationLabel
+{
+    -fx-font-family: "MV Boli";
+    -fx-text-fill: #7e0000;
+    -fx-font-size: 16px;
+    -fx-alignment: Center;
+}

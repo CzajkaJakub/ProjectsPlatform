@@ -136,11 +136,11 @@ public class MusicPlayerController implements Initializable, PathsTitlesFiles {
 
     @FXML
     private void backToMain() throws IOException {
-        if(timer != null){
+        if(timer != null) {
             mediaPlayer.stop();
             cancelTheTimer();
         }
-        PlatformController.changeScene(platformPath, mainTitle, platformIcon);
+        new PlatformController().mainScene();
     }
 
     @FXML
