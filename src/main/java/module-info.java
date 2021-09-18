@@ -9,8 +9,12 @@ module com.example.simpleprojectsplatform {
     opens com.example.simpleprojectsplatform to javafx.fxml;
     exports com.example.simpleprojectsplatform;
     exports com.example.simpleprojectsplatform.MusicPlayer;
+
     opens com.example.simpleprojectsplatform.MusicPlayer to javafx.fxml;
     exports com.example.simpleprojectsplatform.MainPlatform;
+
     opens com.example.simpleprojectsplatform.MainPlatform to javafx.fxml;
+
+    opens com.example.simpleprojectsplatform.TheCountriesWiki to javafx.fxml;
 
 }

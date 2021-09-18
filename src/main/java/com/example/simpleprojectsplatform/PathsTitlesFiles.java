@@ -6,14 +6,29 @@ import javafx.scene.image.Image;
 import java.util.Objects;
 
 public interface PathsTitlesFiles {
+
+    // music player
     String musicPlayerPath = "FXMLFiles/MusicPlayer.fxml";
     String musicPlayerTitle = "Music Player";
     String musicFilesPath = "src/main/resources/com/example/simpleprojectsplatform/MusicFiles";
     String musicPlayerIconPath = "/com/example/simpleprojectsplatform/Images/MusicPlayer/MusicPlayerIco.png";
+
     Image musicPlayerIcon = new Image(Objects.requireNonNull(PlatformController.class.getResourceAsStream(musicPlayerIconPath)));
 
-    String platformPath = "FXMLFiles/PlatformScene.fxml";
+
+    //platform
+    String platformFxmlPath = "FXMLFiles/PlatformScene.fxml";
     String mainTitle = "Simple projects platform";
     String platformIconPath = "/com/example/simpleprojectsplatform/Images/Platform/platformIcon.png";
+
     Image platformIcon = new Image(Objects.requireNonNull(PlatformController.class.getResourceAsStream(platformIconPath)));
+
+
+    //country wiki
+    String theCountriesWikiFxmlPath = "FXMLFiles/TheCountriesWiki.fxml";
+    String theCountriesWikiTitle = "Country Wiki";
+    String theCountriesWikiIconPath = "/com/example/simpleprojectsplatform/Images/CountryWiki/wikiCountryIcon.png";
+
+    Image theCountriesWikiIcon = new Image(Objects.requireNonNull(PlatformController.class.getResourceAsStream(theCountriesWikiIconPath)));
+
 }

@@ -105,7 +105,7 @@ public class DiamondAnimation implements Runnable {
     }
 
     public void moveUP() {
-        if(currentY > 150){
+        if(currentY > 130){
             currentY -= arrowsMove;
             diamondIcon.setLayoutY(currentY);
         }

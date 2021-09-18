@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -19,7 +20,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class PlatformController implements PathsTitlesFiles, Initializable {
+
+public class PlatformController implements PathsTitlesFiles, Initializable, Information {
 
     private static Stage stage;
     private static DiamondAnimation task;
@@ -45,6 +47,7 @@ public class PlatformController implements PathsTitlesFiles, Initializable {
         animation.start();
     }
 
+
     private void changeScene(String path, String frameTitle, Image icon) throws IOException {
         FXMLLoader loader = new FXMLLoader(PlatformApplication.class.getResource(path));
         Scene newScene = new Scene(loader.load());
@@ -53,7 +56,7 @@ public class PlatformController implements PathsTitlesFiles, Initializable {
         stage.setScene(newScene);
         stage.show();
 
-        if(path.equals(platformPath)){
+        if(path.equals(platformFxmlPath)){
             addKeyEventsForAnimations(newScene);
         }
     }
@@ -77,7 +80,7 @@ public class PlatformController implements PathsTitlesFiles, Initializable {
     }
 
     public void mainScene() throws IOException {
-        changeScene(platformPath, mainTitle, platformIcon);
+        changeScene(platformFxmlPath, mainTitle, platformIcon);
     }
 
     @FXML
@@ -89,6 +92,19 @@ public class PlatformController implements PathsTitlesFiles, Initializable {
     private void showMusicFiles() throws IOException {
         Desktop desktop = Desktop.getDesktop();
         desktop.open(new File(musicFilesPath));
+    }
+
+    @FXML
+    private void showMusicPlayerInformation(){
+        Alert information = new Alert(Alert.AlertType.INFORMATION);
+        information.setTitle(Information.playerTitle);
+        information.setHeaderText(Information.playerText);
+        information.show();
+    }
+
+    @FXML
+    private void openCountryWiki() throws IOException {
+        changeScene(theCountriesWikiFxmlPath, theCountriesWikiTitle, theCountriesWikiIcon);
     }
 
 }
