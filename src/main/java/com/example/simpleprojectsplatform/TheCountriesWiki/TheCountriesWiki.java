@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -35,7 +36,8 @@ public class TheCountriesWiki implements Initializable {
     Label isoLabel, nameLabel, iso3Label, numCodeLabel, phoneCodeLabel;
 
     @FXML
-    WebView web;
+    WebView browser;
+
 
     private WebEngine engine;
     private SqlConnection sqlConnection;
@@ -47,7 +49,7 @@ public class TheCountriesWiki implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         sqlConnection = new SqlConnection();
         searchButton.disableProperty().set(true);
-        engine = web.getEngine();
+        engine = browser.getEngine();
         fillComboBox();
     }
 
@@ -81,23 +83,26 @@ public class TheCountriesWiki implements Initializable {
 
     private void fillLabels(ArrayList<String> result) {
         if(result.isEmpty()){
-            isoLabel.setText("No data");
-            nameLabel.setText("");
+            nameLabel.setText("No data");
+            isoLabel.setText("");
             iso3Label.setText("");
             numCodeLabel.setText("");
             phoneCodeLabel.setText("");
         }else{
-            isoLabel.setText(result.get(0));
-            nameLabel.setText(result.get(1));
-            iso3Label.setText(result.get(2));
-            numCodeLabel.setText(result.get(3));
-            phoneCodeLabel.setText(result.get(4));
-            createWeb(nameLabel.getText().replace(" ", "_"));
+            nameLabel.setText("Country name : " + result.get(1));
+            isoLabel.setText("Iso : " + result.get(0));
+            iso3Label.setText("Iso 3 : " + result.get(2));
+            numCodeLabel.setText("Iso : " + result.get(3));
+            phoneCodeLabel.setText("Phone code : " + result.get(4));
+            createWeb(result.get(1).replace(" ", "_"));
         }
     }
 
     private void createWeb(String searchValue) {
+        browser.setStyle("-fx-opacity: 1");
         engine.load("https://en.wikipedia.org/wiki/" + searchValue);
+
+
     }
 
     @FXML
