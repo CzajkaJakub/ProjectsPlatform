@@ -4,6 +4,8 @@ module com.example.simpleprojectsplatform {
     requires javafx.graphics;
     requires javafx.media;
     requires java.desktop;
+    requires java.sql;
+    requires javafx.web;
 
 
     opens com.example.simpleprojectsplatform to javafx.fxml;

@@ -73,8 +73,9 @@
     -fx-background-color: black;
 }
 #background
+.menu
 {
-    -fx-background-color: black;
+    -fx-padding: 5 80 0 20;
 }
 
 .menu-bar
@@ -85,6 +86,17 @@
     -fx-font-size: 16px;
     -fx-alignment: Center;
     -fx-opacity: 0.7;
+}
+
+.context-menu {
+    -fx-background-color: null;
+    -fx-padding:5px 0px 0px 0px;
+}
+
+.menu-item
+{
+    -fx-background-radius: 180px;
+    -fx-padding:0px 0px 0px 0px;
 }
 
 .menu-bar .label
@@ -122,23 +134,6 @@
 }
 
 
-.context-menu {
-    -fx-background-color: null;
-    -fx-padding:5px 0px 0px 0px;
-}
-
-.menu-item
-{
-    -fx-background-radius: 180px;
-    -fx-padding:0px 0px 0px 0px;
-}
-
-.menu
-{
-    -fx-padding: 5 80 0 20;
-}
-
-
 
 #animationLabel
 {
@@ -146,4 +141,9 @@
     -fx-text-fill: #7e0000;
     -fx-font-size: 16px;
     -fx-alignment: Center;
+}
+
+#background
+{
+    -fx-background-color: black;
 }

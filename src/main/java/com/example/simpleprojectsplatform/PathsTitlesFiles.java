@@ -28,7 +28,11 @@ public interface PathsTitlesFiles {
     String theCountriesWikiFxmlPath = "FXMLFiles/TheCountriesWiki.fxml";
     String theCountriesWikiTitle = "Country Wiki";
     String theCountriesWikiIconPath = "/com/example/simpleprojectsplatform/Images/CountryWiki/wikiCountryIcon.png";
+    String connectionYesPath = "/com/example/simpleprojectsplatform/Images/CountryWiki/connectionYes.png";
+    String connectionNoPath = "/com/example/simpleprojectsplatform/Images/CountryWiki/connectionNo.png";
 
     Image theCountriesWikiIcon = new Image(Objects.requireNonNull(PlatformController.class.getResourceAsStream(theCountriesWikiIconPath)));
+    Image connectionYesIcon = new Image(Objects.requireNonNull(PlatformController.class.getResourceAsStream(connectionYesPath)));
+    Image connectionNoIcon = new Image(Objects.requireNonNull(PlatformController.class.getResourceAsStream(connectionNoPath)));
 
 }
