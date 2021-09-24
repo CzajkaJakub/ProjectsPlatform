@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0e8071c-5fe6-44bb-b34d-7faf610be325" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/52c89fca-f564-4fce-9eea-aa0ed606b213/entities/entities.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/52c89fca-f564-4fce-9eea-aa0ed606b213/entities/entities.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/52c89fca-f564-4fce-9eea-aa0ed606b213/entities/entities.dat_i" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/52c89fca-f564-4fce-9eea-aa0ed606b213/entities/entities.dat_i" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/MainPlatform/Information.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/Information.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/MainPlatform/PlatformController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/MainPlatform/PlatformController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/TheCountriesWiki.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/TheCountriesWiki.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/FXMLFiles/PlatformScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/FXMLFiles/PlatformScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css" afterDir="false" />
-    </list>
+    <list default="true" id="b0e8071c-5fe6-44bb-b34d-7faf610be325" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +119,7 @@
       <workItem from="1632393302264" duration="10056000" />
       <workItem from="1632411280857" duration="3686000" />
       <workItem from="1632416044614" duration="9502000" />
-      <workItem from="1632493804609" duration="1981000" />
+      <workItem from="1632493804609" duration="2318000" />
     </task>
     <servers />
   </component>

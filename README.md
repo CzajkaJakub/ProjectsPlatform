@@ -31,6 +31,8 @@ and connect with it. Program allows searching information from country name, num
 you will write 48 and press search button, you will get information about Poland.
 
 
+![](src/main/resources/com/example/simpleprojectsplatform/Screenshots/Main.png)
+
 
 
 
