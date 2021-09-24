@@ -3,6 +3,8 @@
 Personal program to store simple projects. 
 Mainly created for learning new technologies and libraries.
 
+![](src/main/resources/com/example/simpleprojectsplatform/Screenshots/Main.png)
+![](src/main/resources/com/example/simpleprojectsplatform/Screenshots/main2.png)
 
 # ***Technologies, libraries and mechanics used for this project***
 - java
@@ -17,6 +19,8 @@ Mainly created for learning new technologies and libraries.
 Gui's program was created using JavaFX and css files.
 To load music files to player, you have to put .mp3 files into a resources' dictionary.
 
+![](src/main/resources/com/example/simpleprojectsplatform/Screenshots/music.png)
+
 *Mechanics*
 - changing song speed [25%, 50%, 75%, 100%, 125%, 150%, 175%, 200%]
 - volume slider
@@ -30,10 +34,8 @@ file `world` in resource's dictionary. After that, you have to put into the prog
 and connect with it. Program allows searching information from country name, num code and phone code. For example if
 you will write 48 and press search button, you will get information about Poland.
 
-
-![](src/main/resources/com/example/simpleprojectsplatform/Screenshots/Main.png)
-
-
+![](src/main/resources/com/example/simpleprojectsplatform/Screenshots/wiki1.png)
+![](src/main/resources/com/example/simpleprojectsplatform/Screenshots/wiki2.png)
 
 
 
