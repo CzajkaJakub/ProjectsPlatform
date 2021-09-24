@@ -1,5 +1,6 @@
 package com.example.simpleprojectsplatform.MainPlatform;
 
+import com.example.simpleprojectsplatform.Information;
 import com.example.simpleprojectsplatform.PathsTitlesFiles;
 import com.example.simpleprojectsplatform.PlatformApplication;
 
@@ -16,6 +17,8 @@ import javafx.stage.Stage;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -105,6 +108,36 @@ public class PlatformController implements PathsTitlesFiles, Initializable, Info
     @FXML
     private void openCountryWiki() throws IOException {
         changeScene(theCountriesWikiFxmlPath, theCountriesWikiTitle, theCountriesWikiIcon);
+    }
+
+    @FXML
+    private void showWikiCountriesInformation(){
+        Alert information = new Alert(Alert.AlertType.INFORMATION);
+        information.setTitle(Information.wikiCountriesTitle);
+        information.setHeaderText(Information.wikiCountriesAlertText);
+        information.show();
+    }
+
+    @FXML
+    private void showPortfolio(){
+        if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+            try {
+                Desktop.getDesktop().browse(new URI("https://czajkajakub.pl/"));
+            } catch (IOException | URISyntaxException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @FXML
+    private void showGithub(){
+        if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+            try {
+                Desktop.getDesktop().browse(new URI("https://github.com/CzajkaJakub"));
+            } catch (IOException | URISyntaxException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }

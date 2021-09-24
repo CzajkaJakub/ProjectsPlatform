@@ -1,33 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="SimpleProjectsPlatform:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0e8071c-5fe6-44bb-b34d-7faf610be325" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/52c89fca-f564-4fce-9eea-aa0ed606b213/entities/entities.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/52c89fca-f564-4fce-9eea-aa0ed606b213/entities/entities.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/52c89fca-f564-4fce-9eea-aa0ed606b213/entities/entities.dat_i" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/52c89fca-f564-4fce-9eea-aa0ed606b213/entities/entities.dat_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/SqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/SqlConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/MainPlatform/Information.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/Information.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/MainPlatform/PlatformController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/MainPlatform/PlatformController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/TheCountriesWiki.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/TheCountriesWiki.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/Databases/World.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/FXMLFiles/TheCountriesWiki.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/FXMLFiles/TheCountriesWiki.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/Screenshots/wiki1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/Screenshots/wiki1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/Screenshots/wiki2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/Screenshots/wiki2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/FXMLFiles/PlatformScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/FXMLFiles/PlatformScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings">
-    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -43,9 +34,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectId" id="1xfulgtYrJXIeMHm3pX5jNeflwn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -53,7 +41,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -70,7 +58,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.42328042" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
@@ -80,11 +68,11 @@
       <recent name="com.example.simpleprojectsplatform.MainPlatform" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="K:\programowanie\GitHub\Java\SimpleProjectsPlatform\src\main\resources\com\example\simpleprojectsplatform\Screenshots" />
       <recent name="D:\programowanie\GitHub\Java\SimpleProjectsPlatform\src\main\resources\com\example\simpleprojectsplatform\Images\CountryWiki" />
       <recent name="D:\programowanie\GitHub\Java\SimpleProjectsPlatform\src\main\resources\com\example\simpleprojectsplatform\CSSfiles" />
       <recent name="D:\programowanie\GitHub\Java\SimpleProjectsPlatform\src\main\resources\com\example\simpleprojectsplatform\Databases" />
       <recent name="D:\programowanie\GitHub\Java\SimpleProjectsPlatform\src\main\resources\com\example\simpleprojectsplatform\Images" />
+      <recent name="D:\programowanie\GitHub\Java\SimpleProjectsPlatform\src\main\resources\com\example\simpleprojectsplatform\MusicPlayer" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.simpleprojectsplatform" />
@@ -141,29 +129,7 @@
       <workItem from="1632393302264" duration="10056000" />
       <workItem from="1632411280857" duration="3686000" />
       <workItem from="1632416044614" duration="9502000" />
-      <workItem from="1632493804609" duration="2601000" />
-      <workItem from="1632496911738" duration="463000" />
-      <workItem from="1632497473753" duration="529000" />
-      <workItem from="1632574232390" duration="19000" />
-      <workItem from="1633434130463" duration="201000" />
-      <workItem from="1633693449069" duration="169000" />
-      <workItem from="1634580583291" duration="75000" />
-      <workItem from="1634664274526" duration="3352000" />
-      <workItem from="1634669421311" duration="6000" />
-      <workItem from="1634717769825" duration="2883000" />
-      <workItem from="1634806409962" duration="1474000" />
-      <workItem from="1634810278004" duration="15000" />
-      <workItem from="1634813043009" duration="28000" />
-      <workItem from="1634813612405" duration="909000" />
-      <workItem from="1634991391064" duration="5000" />
-      <workItem from="1635076927976" duration="7000" />
-      <workItem from="1637139774240" duration="71000" />
-      <workItem from="1637175010226" duration="118000" />
-      <workItem from="1637400442627" duration="36000" />
-      <workItem from="1638713104058" duration="68000" />
-      <workItem from="1646211926011" duration="1918000" />
-      <workItem from="1646217823708" duration="17000" />
-      <workItem from="1647077256649" duration="2254000" />
+      <workItem from="1632493804609" duration="1981000" />
     </task>
     <servers />
   </component>
@@ -180,39 +146,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/SqlConnection.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/SqlConnection.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/SqlConnection.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/SqlConnection.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/SqlConnection.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

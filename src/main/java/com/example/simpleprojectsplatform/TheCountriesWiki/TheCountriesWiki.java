@@ -92,7 +92,7 @@ public class TheCountriesWiki implements Initializable {
             nameLabel.setText("Country name : " + result.get(1));
             isoLabel.setText("Iso : " + result.get(0));
             iso3Label.setText("Iso 3 : " + result.get(2));
-            numCodeLabel.setText("Iso : " + result.get(3));
+            numCodeLabel.setText("Num code : " + result.get(3));
             phoneCodeLabel.setText("Phone code : " + result.get(4));
             createWeb(result.get(1).replace(" ", "_"));
         }

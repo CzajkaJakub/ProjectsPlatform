@@ -40,6 +40,7 @@
             <Menu mnemonicParsing="false" text="The Wiki Countries">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#openCountryWiki" text="Open Country Wiki" />
+                  <MenuItem mnemonicParsing="false" onAction="#showWikiCountriesInformation" text="Information" />
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Music Player">
@@ -49,14 +50,10 @@
                   <MenuItem mnemonicParsing="false" onAction="#showMusicPlayerInformation" text="Information" />
               </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="place to next project">
+            <Menu mnemonicParsing="false" text="About me">
               <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-              </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="About">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" onAction="#showPortfolio" text="Portfolio" />
+                  <MenuItem mnemonicParsing="false" onAction="#showGithub" text="Github" />
               </items>
             </Menu>
          </menus>

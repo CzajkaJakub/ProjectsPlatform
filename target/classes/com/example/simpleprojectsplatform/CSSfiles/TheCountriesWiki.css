@@ -3,12 +3,6 @@
     -fx-opacity: 0;
 }
 
-#menu
-{
-    -fx-border-color: red;
-    -fx-border-style: dashed;
-}
-
 .label, #loginLabel{
     -fx-background-color:
             linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
