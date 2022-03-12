@@ -29,10 +29,7 @@ To load music files to player, you have to put .mp3 files into a resources' dict
 
 #Wiki Countries
 Gui's of the project was created with JavaFX. It shows basic information about countries
-which are stored in database. To use the program, you have to install mysql, create database and execute query from
-file `world` in resource's dictionary. After that, you have to put into the program data about of your local base
-and connect with it. Program allows searching information from country name, num code and phone code. For example if
-you will write 48 and press search button, you will get information about Poland.
+which are stored in database.
 
 ![](src/main/resources/com/example/simpleprojectsplatform/Screenshots/wiki1.png)
 ![](src/main/resources/com/example/simpleprojectsplatform/Screenshots/wiki2.png)
