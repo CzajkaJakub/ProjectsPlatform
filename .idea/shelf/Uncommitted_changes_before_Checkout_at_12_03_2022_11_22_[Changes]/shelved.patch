@@ -1,0 +1,251 @@
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <groupId>com.example</groupId>\r\n    <artifactId>SimpleProjectsPlatform</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n    <name>SimpleProjectsPlatform</name>\r\n\r\n    <properties>\r\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\r\n        <junit.version>5.7.1</junit.version>\r\n    </properties>\r\n\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>org.openjfx</groupId>\r\n            <artifactId>javafx-controls</artifactId>\r\n            <version>16</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.openjfx</groupId>\r\n            <artifactId>javafx-fxml</artifactId>\r\n            <version>16</version>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>org.junit.jupiter</groupId>\r\n            <artifactId>junit-jupiter-api</artifactId>\r\n            <version>${junit.version}</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.junit.jupiter</groupId>\r\n            <artifactId>junit-jupiter-engine</artifactId>\r\n            <version>${junit.version}</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.openjfx</groupId>\r\n            <artifactId>javafx-media</artifactId>\r\n            <version>16</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.openjfx</groupId>\r\n            <artifactId>javafx-web</artifactId>\r\n            <version>16</version>\r\n        </dependency>\r\n    </dependencies>\r\n\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-compiler-plugin</artifactId>\r\n                <version>3.8.1</version>\r\n                <configuration>\r\n                    <source>16</source>\r\n                    <target>16</target>\r\n                </configuration>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>org.openjfx</groupId>\r\n                <artifactId>javafx-maven-plugin</artifactId>\r\n                <version>0.0.6</version>\r\n                <executions>\r\n                    <execution>\r\n                        <!-- Default configuration for running with: mvn clean javafx:run -->\r\n                        <id>default-cli</id>\r\n                        <configuration>\r\n                            <mainClass>\r\n                                com.example.simpleprojectsplatform/com.example.simpleprojectsplatform.PlatformApplication\r\n                            </mainClass>\r\n                        </configuration>\r\n                    </execution>\r\n                </executions>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	
++++ b/pom.xml	
+@@ -48,6 +48,22 @@
+             <artifactId>javafx-web</artifactId>
+             <version>16</version>
+         </dependency>
++        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
++        <dependency>
++            <groupId>mysql</groupId>
++            <artifactId>mysql-connector-java</artifactId>
++            <version>8.0.28</version>
++        </dependency>
++        <!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
++        <!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
++        <dependency>
++            <groupId>org.mariadb.jdbc</groupId>
++            <artifactId>mariadb-java-client</artifactId>
++            <version>3.0.3</version>
++        </dependency>
++
++
++
+     </dependencies>
+ 
+     <build>
+Index: target/classes/META-INF/MANIFEST.MF
+===================================================================
+diff --git a/target/classes/META-INF/MANIFEST.MF b/target/classes/META-INF/MANIFEST.MF
+deleted file mode 100644
+--- a/target/classes/META-INF/MANIFEST.MF	
++++ /dev/null	
+@@ -1,3 +0,0 @@
+-Manifest-Version: 1.0
+-Main-Class: com.example.simpleprojectsplatform.PlatformApplication
+-
+Index: target/classes/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#browser\r\n{\r\n    -fx-opacity: 0;\r\n}\r\n\r\n.label, #loginLabel{\r\n    -fx-background-color:\r\n            linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),\r\n            linear-gradient(#020b02, #3a3a3a),\r\n            linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),\r\n            linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),\r\n            linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);\r\n    -fx-background-insets: 0,1,4,5,6;\r\n    -fx-background-radius: 9,8,5,4,3;\r\n    -fx-padding: 5 20 5 20;\r\n    -fx-font-family: \"Helvetica\";\r\n    -fx-font-size: 16px;\r\n    -fx-font-weight: bold;\r\n    -fx-text-fill: white;\r\n    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);\r\n    -fx-pref-width: 250px;\r\n    -fx-pref-height: 30px;\r\n    -fx-alignment: center;\r\n}\r\n\r\n#makeConnectionButton {\r\n    -fx-background-color:\r\n            linear-gradient(#ffd65b, #e68400),\r\n            linear-gradient(#ffef84, #f2ba44),\r\n            linear-gradient(#ffea6a, #efaa22),\r\n            linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),\r\n            linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));\r\n    -fx-background-radius: 30;\r\n    -fx-background-insets: 0,1,2,3,0;\r\n    -fx-text-fill: #654b00;\r\n    -fx-font-weight: bold;\r\n    -fx-font-size: 14px;\r\n    -fx-padding: 10 20 10 20;\r\n}\r\n\r\n.text-field, .password-field {\r\n    -fx-background-color: linear-gradient(#ff5400, #be1d00);\r\n    -fx-background-radius: 30;\r\n    -fx-background-insets: 0;\r\n    -fx-text-fill: white;\r\n    -fx-alignment: center;\r\n    -fx-pref-width: 150px;\r\n}\r\n\r\n.button, .combo-box .list-cell {\r\n    -fx-background-color:\r\n            #000000,\r\n            linear-gradient(#7ebcea, #2f4b8f),\r\n            linear-gradient(#426ab7, #263e75),\r\n            linear-gradient(#395cab, #223768);\r\n    -fx-background-insets: 0,1,2,3;\r\n    -fx-background-radius: 3,2,2,2;\r\n    -fx-padding: 5 10 5 10;\r\n    -fx-text-fill: white;\r\n    -fx-font-size: 12px;\r\n}\r\n\r\n#background\r\n{\r\n    -fx-background-color: black;\r\n}\r\n\r\n\r\n#browser\r\n{\r\n    -fx-opacity: 0;\r\n}\r\n\r\n.label, #loginLabel{\r\n    -fx-background-color:\r\n            linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),\r\n            linear-gradient(#020b02, #3a3a3a),\r\n            linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),\r\n            linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),\r\n            linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);\r\n    -fx-background-insets: 0,1,4,5,6;\r\n    -fx-background-radius: 9,8,5,4,3;\r\n    -fx-padding: 5 20 5 20;\r\n    -fx-font-family: \"Helvetica\";\r\n    -fx-font-size: 16px;\r\n    -fx-font-weight: bold;\r\n    -fx-text-fill: white;\r\n    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);\r\n    -fx-pref-width: 250px;\r\n    -fx-pref-height: 30px;\r\n    -fx-alignment: center;\r\n}\r\n\r\n#makeConnectionButton {\r\n    -fx-background-color:\r\n            linear-gradient(#ffd65b, #e68400),\r\n            linear-gradient(#ffef84, #f2ba44),\r\n            linear-gradient(#ffea6a, #efaa22),\r\n            linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),\r\n            linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));\r\n    -fx-background-radius: 30;\r\n    -fx-background-insets: 0,1,2,3,0;\r\n    -fx-text-fill: #654b00;\r\n    -fx-font-weight: bold;\r\n    -fx-font-size: 14px;\r\n    -fx-padding: 10 20 10 20;\r\n}\r\n\r\n.text-field {\r\n    -fx-background-color: linear-gradient(#4d392a, #7a7878);\r\n    -fx-background-radius: 30;\r\n    -fx-background-insets: 0;\r\n    -fx-text-fill: white;\r\n    -fx-alignment: center;\r\n    -fx-pref-width: 150px;\r\n}\r\n\r\n.button, .combo-box .list-cell {\r\n    -fx-background-color:\r\n            #000000,\r\n            linear-gradient(#7ebcea, #2f4b8f),\r\n            linear-gradient(#426ab7, #263e75),\r\n            linear-gradient(#395cab, #223768);\r\n    -fx-background-insets: 0,1,2,3;\r\n    -fx-background-radius: 3,2,2,2;\r\n    -fx-padding: 5 10 5 10;\r\n    -fx-text-fill: white;\r\n    -fx-font-size: 12px;\r\n}\r\n\r\n#background\r\n{\r\n    -fx-background-color: black;\r\n}\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/classes/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css b/target/classes/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css
+--- a/target/classes/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css	
++++ b/target/classes/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css	
+@@ -66,71 +66,3 @@
+ }
+ 
+ 
+-#browser
+-{
+-    -fx-opacity: 0;
+-}
+-
+-.label, #loginLabel{
+-    -fx-background-color:
+-            linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
+-            linear-gradient(#020b02, #3a3a3a),
+-            linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),
+-            linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),
+-            linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);
+-    -fx-background-insets: 0,1,4,5,6;
+-    -fx-background-radius: 9,8,5,4,3;
+-    -fx-padding: 5 20 5 20;
+-    -fx-font-family: "Helvetica";
+-    -fx-font-size: 16px;
+-    -fx-font-weight: bold;
+-    -fx-text-fill: white;
+-    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+-    -fx-pref-width: 250px;
+-    -fx-pref-height: 30px;
+-    -fx-alignment: center;
+-}
+-
+-#makeConnectionButton {
+-    -fx-background-color:
+-            linear-gradient(#ffd65b, #e68400),
+-            linear-gradient(#ffef84, #f2ba44),
+-            linear-gradient(#ffea6a, #efaa22),
+-            linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+-            linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+-    -fx-background-radius: 30;
+-    -fx-background-insets: 0,1,2,3,0;
+-    -fx-text-fill: #654b00;
+-    -fx-font-weight: bold;
+-    -fx-font-size: 14px;
+-    -fx-padding: 10 20 10 20;
+-}
+-
+-.text-field {
+-    -fx-background-color: linear-gradient(#4d392a, #7a7878);
+-    -fx-background-radius: 30;
+-    -fx-background-insets: 0;
+-    -fx-text-fill: white;
+-    -fx-alignment: center;
+-    -fx-pref-width: 150px;
+-}
+-
+-.button, .combo-box .list-cell {
+-    -fx-background-color:
+-            #000000,
+-            linear-gradient(#7ebcea, #2f4b8f),
+-            linear-gradient(#426ab7, #263e75),
+-            linear-gradient(#395cab, #223768);
+-    -fx-background-insets: 0,1,2,3;
+-    -fx-background-radius: 3,2,2,2;
+-    -fx-padding: 5 10 5 10;
+-    -fx-text-fill: white;
+-    -fx-font-size: 12px;
+-}
+-
+-#background
+-{
+-    -fx-background-color: black;
+-}
+-
+-
+Index: target/classes/com/example/simpleprojectsplatform/CSSfiles/Platform.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.menu\r\n{\r\n    -fx-padding: 5 80 0 20;\r\n}\r\n\r\n.menu-bar\r\n{\r\n    -fx-border-radius: 50px;\r\n    -fx-background-color: null;\r\n    -fx-font-family: \"MV Boli\";\r\n    -fx-font-size: 16px;\r\n    -fx-alignment: Center;\r\n    -fx-opacity: 0.7;\r\n}\r\n\r\n.context-menu {\r\n    -fx-background-color: null;\r\n    -fx-padding:5px 0px 0px 0px;\r\n}\r\n\r\n.menu-item\r\n{\r\n    -fx-background-radius: 180px;\r\n    -fx-padding:0px 0px 0px 0px;\r\n}\r\n\r\n.menu-bar .label\r\n{\r\n    -fx-text-fill: white;\r\n}\r\n\r\n.menu-bar .menu-button:hover, .menu-bar .menu-button:showing{\r\n    -fx-background-color: null;\r\n}\r\n\r\n.menu-bar .menu-button:hover .label, .menu-bar .menu-button:showing .label{\r\n    -fx-text-fill: #2fff00;\r\n    -fx-background-color: null;\r\n}\r\n\r\n.menu-bar .menu-button .menu-item:hover .label\r\n{\r\n    -fx-text-fill: #2fff00;\r\n}\r\n\r\n.menu-bar .menu-button .menu-item\r\n{\r\n    -fx-background-color: black;\r\n    -fx-opacity: 0.7;\r\n    -fx-padding: 10px;\r\n    -fx-background-insets: 5px\r\n\r\n}\r\n\r\n.menu-bar .menu-button .menu-item .label\r\n{\r\n    -fx-text-fill: white;\r\n    -fx-padding: 10;\r\n}\r\n\r\n\r\n\r\n#animationLabel\r\n{\r\n    -fx-font-family: \"MV Boli\";\r\n    -fx-text-fill: #7e0000;\r\n    -fx-font-size: 16px;\r\n    -fx-alignment: Center;\r\n}\r\n\r\n#background\r\n{\r\n    -fx-background-color: black;\r\n}\r\n#background\r\n.menu\r\n{\r\n    -fx-padding: 5 80 0 20;\r\n}\r\n\r\n.menu-bar\r\n{\r\n    -fx-border-radius: 50px;\r\n    -fx-background-color: null;\r\n    -fx-font-family: \"MV Boli\";\r\n    -fx-font-size: 16px;\r\n    -fx-alignment: Center;\r\n    -fx-opacity: 0.7;\r\n}\r\n\r\n.context-menu {\r\n    -fx-background-color: null;\r\n    -fx-padding:5px 0px 0px 0px;\r\n}\r\n\r\n.menu-item\r\n{\r\n    -fx-background-radius: 180px;\r\n    -fx-padding:0px 0px 0px 0px;\r\n}\r\n\r\n.menu-bar .label\r\n{\r\n    -fx-text-fill: white;\r\n}\r\n\r\n.menu-bar .menu-button:hover, .menu-bar .menu-button:showing{\r\n    -fx-background-color: null;\r\n}\r\n\r\n.menu-bar .menu-button:hover .label, .menu-bar .menu-button:showing .label{\r\n    -fx-text-fill: #2fff00;\r\n    -fx-background-color: null;\r\n}\r\n\r\n.menu-bar .menu-button .menu-item:hover .label\r\n{\r\n    -fx-text-fill: #2fff00;\r\n}\r\n\r\n.menu-bar .menu-button .menu-item\r\n{\r\n    -fx-background-color: black;\r\n    -fx-opacity: 0.7;\r\n    -fx-padding: 10px;\r\n    -fx-background-insets: 5px\r\n\r\n}\r\n\r\n.menu-bar .menu-button .menu-item .label\r\n{\r\n    -fx-text-fill: white;\r\n    -fx-padding: 10;\r\n}\r\n\r\n\r\n\r\n#animationLabel\r\n{\r\n    -fx-font-family: \"MV Boli\";\r\n    -fx-text-fill: #7e0000;\r\n    -fx-font-size: 16px;\r\n    -fx-alignment: Center;\r\n}\r\n\r\n#background\r\n{\r\n    -fx-background-color: black;\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/classes/com/example/simpleprojectsplatform/CSSfiles/Platform.css b/target/classes/com/example/simpleprojectsplatform/CSSfiles/Platform.css
+--- a/target/classes/com/example/simpleprojectsplatform/CSSfiles/Platform.css	
++++ b/target/classes/com/example/simpleprojectsplatform/CSSfiles/Platform.css	
+@@ -72,78 +72,3 @@
+ {
+     -fx-background-color: black;
+ }
+-#background
+-.menu
+-{
+-    -fx-padding: 5 80 0 20;
+-}
+-
+-.menu-bar
+-{
+-    -fx-border-radius: 50px;
+-    -fx-background-color: null;
+-    -fx-font-family: "MV Boli";
+-    -fx-font-size: 16px;
+-    -fx-alignment: Center;
+-    -fx-opacity: 0.7;
+-}
+-
+-.context-menu {
+-    -fx-background-color: null;
+-    -fx-padding:5px 0px 0px 0px;
+-}
+-
+-.menu-item
+-{
+-    -fx-background-radius: 180px;
+-    -fx-padding:0px 0px 0px 0px;
+-}
+-
+-.menu-bar .label
+-{
+-    -fx-text-fill: white;
+-}
+-
+-.menu-bar .menu-button:hover, .menu-bar .menu-button:showing{
+-    -fx-background-color: null;
+-}
+-
+-.menu-bar .menu-button:hover .label, .menu-bar .menu-button:showing .label{
+-    -fx-text-fill: #2fff00;
+-    -fx-background-color: null;
+-}
+-
+-.menu-bar .menu-button .menu-item:hover .label
+-{
+-    -fx-text-fill: #2fff00;
+-}
+-
+-.menu-bar .menu-button .menu-item
+-{
+-    -fx-background-color: black;
+-    -fx-opacity: 0.7;
+-    -fx-padding: 10px;
+-    -fx-background-insets: 5px
+-
+-}
+-
+-.menu-bar .menu-button .menu-item .label
+-{
+-    -fx-text-fill: white;
+-    -fx-padding: 10;
+-}
+-
+-
+-
+-#animationLabel
+-{
+-    -fx-font-family: "MV Boli";
+-    -fx-text-fill: #7e0000;
+-    -fx-font-size: 16px;
+-    -fx-alignment: Center;
+-}
+-
+-#background
+-{
+-    -fx-background-color: black;
+-}
+Index: target/classes/com/example/simpleprojectsplatform/FXMLFiles/TheCountriesWiki.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.geometry.Insets?>\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.ComboBox?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.TextField?>\r\n<?import javafx.scene.image.Image?>\r\n<?import javafx.scene.image.ImageView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.layout.FlowPane?>\r\n<?import javafx.scene.web.WebView?>\r\n\r\n<AnchorPane id=\"background\" fx:id=\"background\" prefHeight=\"800.0\" prefWidth=\"1250.0\" stylesheets=\"@../CSSfiles/TheCountriesWiki.css\" xmlns=\"http://javafx.com/javafx/16\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.simpleprojectsplatform.TheCountriesWiki.TheCountriesWiki\">\r\n   <children>\r\n      <ImageView fitHeight=\"800.0\" fitWidth=\"1250.0\" opacity=\"0.53\" pickOnBounds=\"true\">\r\n         <image>\r\n            <Image url=\"@../Images/CountryWiki/wallpaper.jpg\" />\r\n         </image>\r\n      </ImageView>\r\n      <WebView fx:id=\"browser\" prefHeight=\"800.0\" prefWidth=\"950.0\" />\r\n      <FlowPane alignment=\"CENTER\" columnHalignment=\"CENTER\" layoutX=\"950.0\" orientation=\"VERTICAL\" prefHeight=\"800.0\" prefWidth=\"300.0\" prefWrapLength=\"9000.0\" style=\"-fx-background-color: null;\" vgap=\"15.0\" AnchorPane.rightAnchor=\"0.0\" AnchorPane.topAnchor=\"0.0\">\r\n         <children>\r\n            <ImageView fx:id=\"connectionMark\" fitHeight=\"83.0\" fitWidth=\"75.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n               <image>\r\n                  <Image url=\"@../Images/CountryWiki/connectionNo.png\" />\r\n               </image>\r\n            </ImageView>\r\n            <Button id=\"makeConnectionButton\" fx:id=\"makeConnectionButton\" mnemonicParsing=\"false\" onAction=\"#makeConnection\" text=\"Make Connection\" />\r\n            <TextField fx:id=\"searchValue\">\r\n               <FlowPane.margin>\r\n                  <Insets top=\"50.0\" />\r\n               </FlowPane.margin>\r\n            </TextField>\r\n            <ComboBox fx:id=\"searchType\" prefWidth=\"150.0\">\r\n               <FlowPane.margin>\r\n                  <Insets />\r\n               </FlowPane.margin>\r\n            </ComboBox>\r\n            <Button fx:id=\"searchButton\" mnemonicParsing=\"false\" onAction=\"#searchData\" text=\"search\" />\r\n            <Label fx:id=\"nameLabel\" prefHeight=\"25.0\" prefWidth=\"237.0\" text=\"Country name\" />\r\n            <Label fx:id=\"isoLabel\" prefHeight=\"39.0\" prefWidth=\"129.0\" text=\"Iso\" />\r\n            <Label fx:id=\"iso3Label\" text=\"Iso 3\" />\r\n            <Label fx:id=\"phoneCodeLabel\" prefHeight=\"57.0\" prefWidth=\"176.0\" text=\"Phone code\" />\r\n            <Label fx:id=\"numCodeLabel\" prefHeight=\"57.0\" prefWidth=\"237.0\" text=\"Num code\" />\r\n            <Button mnemonicParsing=\"false\" onAction=\"#backToMain\" prefHeight=\"25.0\" prefWidth=\"94.0\" text=\"Back to main\" />\r\n         </children>\r\n      </FlowPane>\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/classes/com/example/simpleprojectsplatform/FXMLFiles/TheCountriesWiki.fxml b/target/classes/com/example/simpleprojectsplatform/FXMLFiles/TheCountriesWiki.fxml
+--- a/target/classes/com/example/simpleprojectsplatform/FXMLFiles/TheCountriesWiki.fxml	
++++ b/target/classes/com/example/simpleprojectsplatform/FXMLFiles/TheCountriesWiki.fxml	
+@@ -4,6 +4,7 @@
+ <?import javafx.scene.control.Button?>
+ <?import javafx.scene.control.ComboBox?>
+ <?import javafx.scene.control.Label?>
++<?import javafx.scene.control.PasswordField?>
+ <?import javafx.scene.control.TextField?>
+ <?import javafx.scene.image.Image?>
+ <?import javafx.scene.image.ImageView?>
+@@ -19,13 +20,17 @@
+          </image>
+       </ImageView>
+       <WebView fx:id="browser" prefHeight="800.0" prefWidth="950.0" />
+-      <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="950.0" orientation="VERTICAL" prefHeight="800.0" prefWidth="300.0" prefWrapLength="9000.0" style="-fx-background-color: null;" vgap="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
++      <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="900.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="800.0" prefWidth="300.0" prefWrapLength="9000.0" style="-fx-background-color: null;" vgap="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+             <ImageView fx:id="connectionMark" fitHeight="83.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                   <Image url="@../Images/CountryWiki/connectionNo.png" />
+                </image>
+             </ImageView>
++            <Label id="loginLabel" prefHeight="57.0" prefWidth="225.0" text="Log in to the database" />
++            <TextField fx:id="loginField" prefHeight="25.0" prefWidth="194.0" promptText="User" />
++            <PasswordField fx:id="passwordField" prefHeight="10.0" prefWidth="149.0" promptText="Password" />
++            <TextField fx:id="databaseNameField" promptText="Database name" />
+             <Button id="makeConnectionButton" fx:id="makeConnectionButton" mnemonicParsing="false" onAction="#makeConnection" text="Make Connection" />
+             <TextField fx:id="searchValue">
+                <FlowPane.margin>

@@ -10,9 +10,6 @@ import java.util.ArrayList;
 
 public class SqlConnection implements PathsTitlesFiles {
 
-    private String user;
-    private String password;
-    private String url = "jdbc:mysql://localhost:3306/";
     private ConnectionStatus connected = ConnectionStatus.NOT_CONNECTED;
     private Connection connection;
 
@@ -20,15 +17,12 @@ public class SqlConnection implements PathsTitlesFiles {
         return connected;
     }
 
-    public void insertDataConnection(String user, String password, String databaseName){
-        this.user = user;
-        this.password = password;
-        this.url = url + databaseName;
-    }
-
     public void makeConnection(ImageView connectionMark, Button makeConnectionButton, Button searchButton){
         connection = null;
         try {
+            String user = "czajkaja_countries";
+            String password = "countries123";
+            String url = "jdbc:mariadb://hs10.linux.pl:3306/czajkaja_mybase";
             connectionMark.setImage(connectionYesIcon);
             connection = DriverManager.getConnection(url, user, password);
             connected = ConnectionStatus.CONNECTED;

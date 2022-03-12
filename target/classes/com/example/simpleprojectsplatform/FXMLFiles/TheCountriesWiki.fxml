@@ -19,7 +19,7 @@
          </image>
       </ImageView>
       <WebView fx:id="browser" prefHeight="800.0" prefWidth="950.0" />
-      <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="950.0" orientation="VERTICAL" prefHeight="800.0" prefWidth="300.0" prefWrapLength="9000.0" style="-fx-background-color: null;" vgap="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="900.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="800.0" prefWidth="300.0" prefWrapLength="9000.0" style="-fx-background-color: null;" vgap="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fx:id="connectionMark" fitHeight="83.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                <image>

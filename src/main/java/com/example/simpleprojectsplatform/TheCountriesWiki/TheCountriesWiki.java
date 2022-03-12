@@ -60,10 +60,6 @@ public class TheCountriesWiki implements Initializable {
 
     @FXML
     private void makeConnection(){
-        String databaseLogin = loginField.getText();
-        String databasePassword = passwordField.getText();
-        String databaseName = databaseNameField.getText();
-        sqlConnection.insertDataConnection(databaseLogin, databasePassword, databaseName);
         sqlConnection.makeConnection(connectionMark, makeConnectionButton, searchButton);
     }
 

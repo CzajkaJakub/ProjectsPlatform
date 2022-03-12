@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0e8071c-5fe6-44bb-b34d-7faf610be325" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SimpleProjectsPlatform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mariadb_jdbc_mariadb_java_client_3_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/SqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/SqlConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/TheCountriesWiki.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/TheCountriesWiki.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/simpleprojectsplatform/CSSfiles/Platform.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/simpleprojectsplatform/CSSfiles/Platform.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -24,7 +34,23 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="08cb68f69c80a7e45b5840cbcf418a3b45d0ca58" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="vcs://src/main/java/com/example/simpleprojectsplatform/PlatformApplication.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="vcs://src/main/resources/com/example/simpleprojectsplatform/CSSfiles/Platform.css" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1xfulgtYrJXIeMHm3pX5jNeflwn" />
   <component name="ProjectViewState">
@@ -53,7 +79,10 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.42328042" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="editor.reader.mode" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -91,6 +120,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PlatformApplication" />
+        <item itemvalue="Application.PlatformApplication" />
         <item itemvalue="Application.PlatformApplication" />
       </list>
     </recent_temporary>
@@ -138,7 +169,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
