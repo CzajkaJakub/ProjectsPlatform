@@ -29,5 +29,7 @@
     <orderEntry type="library" name="Maven: org.openjfx:javafx-web:16" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-web:win:16" level="project" />
     <orderEntry type="library" name="Maven: org.mariadb.jdbc:mariadb-java-client:3.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.postgresql:postgresql:42.3.5" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.checkerframework:checker-qual:3.5.0" level="project" />
   </component>
 </module>

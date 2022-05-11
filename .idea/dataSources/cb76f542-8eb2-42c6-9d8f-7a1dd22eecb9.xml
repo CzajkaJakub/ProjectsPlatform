@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="czajkaja_mybase@hs10.linux.pl">
-  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.32">
+  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.38">
     <root id="1">
       <DefaultCasing>exact</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -1038,10 +1038,10 @@
       <CollationName>utf8_polish_ci</CollationName>
     </table>
     <column id="331" parent="327" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="332" parent="327" name="Iso">
       <DataType>char(2)|0s</DataType>
@@ -1076,10 +1076,10 @@
       <Primary>1</Primary>
     </key>
     <column id="339" parent="328" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="340" parent="328" name="currency_name">
       <DataType>varchar(64)|0s</DataType>
@@ -1120,10 +1120,10 @@
       <UnderlyingIndexName>currency_currency_name_uindex</UnderlyingIndexName>
     </key>
     <column id="348" parent="329" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="349" parent="329" name="password">
       <DataType>varchar(64)|0s</DataType>
@@ -1164,10 +1164,10 @@
       <UnderlyingIndexName>users_login_uindex</UnderlyingIndexName>
     </key>
     <column id="357" parent="330" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="358" parent="330" name="id_kat">
       <DataType>int(11)|0s</DataType>

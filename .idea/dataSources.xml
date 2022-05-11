@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mariadb://hs10.linux.pl:3306/czajkaja_mybase</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="d2ttasfjtidlfl@ec2-3-230-122-20.compute-1.amazonaws.com" uuid="46317e16-20a2-4eb0-b126-f6c894c10b81">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-3-230-122-20.compute-1.amazonaws.com:5432/d2ttasfjtidlfl</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

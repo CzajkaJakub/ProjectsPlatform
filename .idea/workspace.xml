@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0e8071c-5fe6-44bb-b34d-7faf610be325" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SimpleProjectsPlatform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cb76f542-8eb2-42c6-9d8f-7a1dd22eecb9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cb76f542-8eb2-42c6-9d8f-7a1dd22eecb9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_03_2022_11_20_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_03_2022_11_20__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_03_2022_11_26_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_03_2022_11_26__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleProjectsPlatform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleProjectsPlatform.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/SqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/SqlConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/TheCountriesWiki.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simpleprojectsplatform/TheCountriesWiki/TheCountriesWiki.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/FXMLFiles/TheCountriesWiki.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/FXMLFiles/TheCountriesWiki.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/Screenshots/wiki1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/Screenshots/wiki1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/Screenshots/wiki2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/simpleprojectsplatform/Screenshots/wiki2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/simpleprojectsplatform/CSSfiles/Platform.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/simpleprojectsplatform/CSSfiles/Platform.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/simpleprojectsplatform/CSSfiles/TheCountriesWiki.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/simpleprojectsplatform/FXMLFiles/TheCountriesWiki.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/simpleprojectsplatform/FXMLFiles/TheCountriesWiki.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +45,8 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="vcs://src/main/java/com/example/simpleprojectsplatform/PlatformApplication.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="vcs://src/main/resources/com/example/simpleprojectsplatform/CSSfiles/Platform.css" root0="FORCE_HIGHLIGHTING" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -64,30 +60,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.42328042" />
-    <property name="settings.editor.selected.configurable" value="editor.reader.mode" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "K:/programowanie/GitHub/Java/SimpleProjectsPlatform"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
   </component>
@@ -160,6 +143,7 @@
       <workItem from="1632411280857" duration="3686000" />
       <workItem from="1632416044614" duration="9502000" />
       <workItem from="1632493804609" duration="2580000" />
+      <workItem from="1652257521688" duration="1648000" />
     </task>
     <servers />
   </component>
